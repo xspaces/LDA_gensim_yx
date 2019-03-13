@@ -1,9 +1,12 @@
 import jieba
 import os
+
+
 # 载入停用词表
 def stopwordslist(filepath):
     stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]
     return stopwords
+
 
 # 主要思想是分词过后，遍历一下停用词表，去掉停用词。
 # 对句子进行分词
@@ -18,6 +21,9 @@ def seg_sentence(sentence):
                 outstr += word
                 outstr += " "
     return outstr
+
+
+# 输入的文档应该放在input文件夹下
 input_path=os.getcwd()+'\\input\\source1.txt'
 inputs = open(input_path, 'r', encoding='utf-8')
 output_path=os.getcwd()+'\\output\\output1.txt'

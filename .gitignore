@@ -123,8 +123,8 @@ dmypy.json
 .pyre/
 
 
-# self definatin
+# self defination
 input/
 output/
-.ideal/
+.idea/
 .vscode/
